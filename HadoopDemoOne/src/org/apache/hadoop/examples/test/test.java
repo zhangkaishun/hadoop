@@ -1,4 +1,4 @@
-package org.apache.hadoop.examples.text;
+package org.apache.hadoop.examples.test;
 
 import org.junit.Test;
 

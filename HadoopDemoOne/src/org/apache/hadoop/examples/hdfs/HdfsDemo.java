@@ -27,7 +27,7 @@ public class HdfsDemo {
 	public void init() {
 		try {
 			fs = FileSystem.get(new URI("hdfs://namenode:9000"),
-					new Configuration(), "zhangkaishun");
+					new Configuration(), "zks");
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (InterruptedException e) {
