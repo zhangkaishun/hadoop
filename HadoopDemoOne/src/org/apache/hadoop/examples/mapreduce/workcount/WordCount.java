@@ -21,6 +21,7 @@ public class WordCount {
 			job.setUser("zhangkaishun");
 			job.setJobName("wordcount ื๗าต");
 			job.setJarByClass(WordCount.class);
+			job.setPartitionerClass(MyPartition.class);
 			job.setMapperClass(WCMap.class);
 			job.setReducerClass(WCReduce.class);
 			job.setCombinerClass(WCReduce.class);
