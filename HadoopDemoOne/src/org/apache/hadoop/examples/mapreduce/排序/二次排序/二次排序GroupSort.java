@@ -13,6 +13,9 @@ import org.apache.hadoop.io.WritableComparator;
  */
 public class 二次排序GroupSort extends WritableComparator {
 
+	public 二次排序GroupSort() {
+		super(CombinationKey.class,true);
+	}
 	@Override
 	public int compare(Object a, Object b) {
 		CombinationKey keyOne = (CombinationKey) a;

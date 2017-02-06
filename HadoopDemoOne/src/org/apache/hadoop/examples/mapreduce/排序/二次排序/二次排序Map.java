@@ -15,7 +15,7 @@ public class ¶ş´ÎÅÅĞòMap extends Mapper<LongWritable, Text, CombinationKey, IntW
 	protected void map(LongWritable key, Text value,
 			Context context)
 			throws IOException, InterruptedException {
-		String[] split = value.toString().split("/t");
+		String[] split = value.toString().split("\t");
 		String key1=split[0];
 		String value1=split[1];
 		combinationKey.setFirstKey(new Text(key1+","+value1));

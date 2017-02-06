@@ -7,9 +7,9 @@ import java.io.IOException;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.io.Writable;
+import org.apache.hadoop.io.WritableComparable;
 
-public class CombinationKey implements Writable{
+public class CombinationKey implements WritableComparable<CombinationKey>{
 
 	private Text firstKey;
 	private IntWritable secondKey;
@@ -42,6 +42,12 @@ public class CombinationKey implements Writable{
 	public void write(DataOutput out) throws IOException {
 		out.writeUTF(this.firstKey.toString());
 		out.writeInt(this.secondKey.get());
+	}
+
+	@Override
+	public int compareTo(CombinationKey arg0) {
+		return -this.firstKey.compareTo(arg0.firstKey);
+		//return 0;
 	}
 
 	

@@ -17,6 +17,7 @@ public class WordCount {
 	public static void main(String[] args) {
 		try {
 			Configuration config=new Configuration();
+			
 			Job job=Job.getInstance(config);
 			job.setUser("zhangkaishun");
 			job.setJobName("wordcount ื๗าต");

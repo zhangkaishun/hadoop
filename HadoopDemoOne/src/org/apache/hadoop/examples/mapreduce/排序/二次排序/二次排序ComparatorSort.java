@@ -5,6 +5,12 @@ import org.apache.hadoop.io.WritableComparator;
 
 public class 二次排序ComparatorSort extends WritableComparator {
 
+	/**
+	 * 切记重写无参构造方法
+	 */
+	public 二次排序ComparatorSort() {
+		super(CombinationKey.class,true);
+	}
 	@Override
 	public int compare(WritableComparable a, WritableComparable b) {
 		CombinationKey combinationKeyOne = (CombinationKey) a;

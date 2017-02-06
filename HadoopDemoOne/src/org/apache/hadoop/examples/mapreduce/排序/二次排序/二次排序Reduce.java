@@ -9,6 +9,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 public class ¶ş´ÎÅÅĞòReduce extends Reducer<CombinationKey, IntWritable, Text, Text>{
 
+	
 	@Override
 	protected void reduce(CombinationKey combinationKey, Iterable<IntWritable> iter,
 			Context context)
